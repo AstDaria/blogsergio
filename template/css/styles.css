@@ -1,0 +1,98 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  color: #302c23;
+}
+a {
+  color: #302c23;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus {
+  outline: none;
+}
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.footer {
+  background-color: #f5f3f4;
+  padding: 20px 0;
+}
+.footer__blog {
+  display: inline-flex;
+}
+.header {
+  background-color: #f5f3f4;
+  padding: 20px 0;
+}
+.header__blog {
+  display: inline-flex;
+}
+.header__column-text {
+  width: 60%;
+  margin: 0 auto;
+}
+.header__column-link {
+  width: 50%;
+}
+.header__part {
+  float: left;
+  width: 69%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.header__part-img {
+  width: 30%;
+  padding-left: 0;
+}
+.header__img {
+  width: 100%;
+}
+.header__title {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0;
+}
+.header__subtitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.header__info {
+  font-size: 0.9em;
+}
+.header__text {
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+.header__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.header__input:focus {
+  border: 1px solid;
+  padding: 9px 6px;
+}
+.header__button {
+  background: #9ecfe7;
+  border: 1px solid #9ecfe7;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.article__text {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+.article__img {
+  width: 100%;
+}
