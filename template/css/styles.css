@@ -8,9 +8,11 @@ body {
 }
 a {
   color: #302c23;
+  border-bottom: 1px solid;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  border: none;
 }
 button:focus,
 input:focus {
@@ -28,36 +30,58 @@ input:focus {
 .footer__blog {
   display: inline-flex;
 }
+.footer__subtitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.footer__info {
+  font-size: 0.9em;
+}
+.column-text {
+  width: 60%;
+  margin: 0 auto;
+}
+.column-link {
+  width: 50%;
+}
 .header {
-  background-color: #f5f3f4;
-  padding: 20px 0;
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #f5f3f4;
 }
 .header__blog {
   display: inline-flex;
 }
-.header__column-text {
-  width: 60%;
-  margin: 0 auto;
-}
-.header__column-link {
-  width: 50%;
-}
-.header__part {
+.header__area {
   float: left;
   width: 69%;
   box-sizing: border-box;
   padding-left: 20px;
 }
-.header__part-img {
+.header__area-img {
   width: 30%;
   padding-left: 0;
+  position: relative;
+}
+.header__area-img:before {
+  content: '';
+  position: absolute;
+  width: 169px;
+  height: 169px;
+  border: 1px solid #f5f3f4;
+  top: -12px;
+  right: 10px;
+}
+.header__content {
+  margin-top: 10px;
 }
 .header__img {
   width: 100%;
+  vertical-align: top;
 }
 .header__title {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
 }
 .header__subtitle {
@@ -69,25 +93,12 @@ input:focus {
   font-size: 0.9em;
 }
 .header__text {
-  font-size: 0.8em;
+  font-size: 0.82em;
   margin-top: 10px;
-}
-.header__input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.header__input:focus {
-  border: 1px solid;
-  padding: 9px 6px;
-}
-.header__button {
-  background: #9ecfe7;
-  border: 1px solid #9ecfe7;
-  padding: 8px 10px;
-  cursor: pointer;
+  padding-left: 10px;
+  border-left: 1px solid #b6bcc1;
+  color: #665a5a;
+  line-height: 1.55em;
 }
 .article__text {
   font-size: 1em;
@@ -95,4 +106,24 @@ input:focus {
 }
 .article__img {
   width: 100%;
+}
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.input:focus {
+  border: 1px solid;
+  padding: 9px 6px;
+}
+.button {
+  background: #9ecfe7;
+  border: 1px solid #9ecfe7;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.blog__title {
+  font-weight: 400;
 }
