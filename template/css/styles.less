@@ -24,18 +24,30 @@ input:focus {
 	margin: 0 auto;
 }
 .footer {
-	background-color: #f5f3f4;
-	padding: 20px 0;
+	border-top: 1px solid #f5f3f4;
+	padding: 40px 0;
+	margin-top: 40px;
 	&__blog {
 		display: inline-flex;
+		width: 100%;
 	}
 	&__subtitle {
-		font-size: 1.5em;
-    	font-weight: 600;
+		font-size: 1em;
+    	font-weight: 400;
     	line-height: 1.5em;
 	}
 	&__info {
-		font-size: 0.9em;
+		font-size: 0.8em;
+		margin-bottom: 5px;
+		&:last-child {
+			padding-bottom: 5px;
+		}
+	}
+	&__contacts {
+		border-left: 1px solid #b6bcc1;
+	    color: #665a5a;
+	    margin: 10px 0 0 10px;
+	    padding-left: 5px;
 	}
 }
 .column {
@@ -70,6 +82,7 @@ input:focus {
 				border: 1px solid #f5f3f4;
 				top: -12px;
 				right: 10px;
+				z-index: -1;
 			}
 		}
 	}
@@ -104,6 +117,8 @@ input:focus {
 	}
 }
 .article {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
 	&__text {
 		font-size: 1em;
     	line-height: 1.8em;
@@ -111,26 +126,54 @@ input:focus {
 	&__img {
 		width: 100%;
 	}
+	&__title {
+		font-size: 1.2em;
+		margin: 0 0 15px;
+		font-weight: 400;
+	}
+	&__button {
+		text-align: center;
+	}
+	&__more {
+		text-align: center;
+		border: 1px solid #665a5a;
+		padding: 10px 20px;
+		min-width: 100px;
+		background: transparent;
+		cursor: pointer;
+		display: inline-block;
+		&:hover {
+			background-color: #f5f3f4;
+		}
+	}
 }
 .input {
-	width: 100%;
+	width: 50%;
     box-sizing: border-box;
-    padding: 8px 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     &:focus {
-    	border: 1px solid;
-    	padding: 9px 6px;
+    	border: 1px solid #b6bcc1;
+    	padding: 6px;
     }
 }
 .button {
 	background: #9ecfe7;
     border: 1px solid #9ecfe7;
-    padding: 8px 10px;
+    padding: 6px 10px;
     cursor: pointer;
+    &:hover {
+    	background-color: #91bfd6;
+    }
 }
 .blog {
 	&__title {
 		font-weight: 400;
+		margin-bottom: 40px;
+		margin-top: 0;
+	}
+	&__article {
+		margin-top: 50px;
 	}
 }
