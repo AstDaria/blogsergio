@@ -20,6 +20,7 @@ p {
 img {
 	width: 100%;
 	vertical-align: top;
+	margin-bottom: 20px;
 }
 button:focus,
 input:focus {
@@ -33,6 +34,7 @@ input:focus {
     }
 }
 .container {
+	max-width: 940px;
 	width: 940px;
 	padding: 0 10px;
 	margin: 0 auto;
@@ -101,12 +103,11 @@ input:focus {
 			}
 		}
 	}
+	&__img {
+		margin-bottom: 0;
+	}
 	&__content {
 		margin-top: 10px;
-	}
-	&__img-link {
-		display: block;
-		border-bottom: none;
 	}
 	&__title {
 		font-size: 2em;
@@ -140,6 +141,10 @@ input:focus {
 	}
 	&__img {
 		width: 100%;
+		&-link {
+			display: block;
+			border-bottom: none;
+		}
 	}
 	&__title {
 		font-size: 1.3em;
@@ -225,4 +230,116 @@ input:focus {
     &:hover {
     	border-bottom: 2px solid transparent;
     }
+}
+@media screen and (min-width: 768px) and (max-width: 980px) {
+	.container {
+		width: 96%;
+		padding: 0;
+	}
+	.column {
+		&-text {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+	.scrollToTop {
+    	top: -60px;
+    }
+    .header__area {
+		&-img {
+			&:before {
+				content: none;
+			}
+		}
+	}	
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	.container {
+		width: 96%;
+		padding: 0;
+	}
+	.column {
+		&-text {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.header__area {
+		&-img {
+			&:before {
+				content: none;
+			}
+		}
+	}
+	.scrollToTop {
+    	top: -60px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 590px) {
+	.container {
+		width: 96%;
+		padding: 0;
+	}
+	.column {
+		&-text {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+	.header {
+		padding: 0 0 20px;
+		&__area {
+			width: 100%;
+			padding-left: 0;
+			&-img {
+				display: none;
+			}
+		}	
+	}	
+}
+@media screen and (max-width: 479px) {
+	.container {
+		width: 96%;
+		padding: 0;
+	}
+	.column {
+		&-text {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&-link {
+			width: 100%;
+			float: none;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 50px;
+			}
+		}
+	}
+	.header {
+		padding: 0 0 20px;
+		&__area {
+			width: 100%;
+			padding-left: 0;
+			&-img {
+				display: none;
+			}
+		}		
+	}
+	.scrollToTop {
+    	width: 96%;
+	    height: 40px;
+	    box-sizing: border-box;
+	    margin: 0 auto;
+	    position: absolute;
+	    display: block;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    top: initial;
+    }
+    .footer {
+	    padding: 40px 0 5px;
+	    margin-bottom: 10px;
+	}
 }
