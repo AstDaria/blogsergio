@@ -14,9 +14,23 @@ a {
 a:hover {
 	border: none;
 }
+p {
+	margin: 0 0 20px;
+}
+img {
+	width: 100%;
+	vertical-align: top;
+}
 button:focus,
 input:focus {
 	outline: none;
+}
+.clearfix() {
+    &:after {
+        content: "";
+        clear: both;
+        display:block;
+    }
 }
 .container {
 	width: 940px;
@@ -27,9 +41,9 @@ input:focus {
 	border-top: 1px solid #f5f3f4;
 	padding: 40px 0;
 	margin-top: 40px;
+	position: relative;
 	&__blog {
-		display: inline-flex;
-		width: 100%;
+		.clearfix();
 	}
 	&__subtitle {
 		font-size: 1em;
@@ -47,7 +61,7 @@ input:focus {
 		border-left: 1px solid #b6bcc1;
 	    color: #665a5a;
 	    margin: 10px 0 0 10px;
-	    padding-left: 5px;
+	    padding-left: 10px;
 	}
 }
 .column {
@@ -57,13 +71,14 @@ input:focus {
 	}
 	&-link {
 		width: 50%;
+		float: left;
 	}
 }
 .header {
 	padding: 30px 0 20px;
 	border-bottom: 1px solid #f5f3f4;
 	&__blog {
-		display: inline-flex;
+		.clearfix();
 	}
 	&__area {
 		float: left;
@@ -89,9 +104,9 @@ input:focus {
 	&__content {
 		margin-top: 10px;
 	}
-	&__img {
-		width: 100%;
-		vertical-align: top;
+	&__img-link {
+		display: block;
+		border-bottom: none;
 	}
 	&__title {
 		font-size: 2em;
@@ -127,7 +142,7 @@ input:focus {
 		width: 100%;
 	}
 	&__title {
-		font-size: 1.2em;
+		font-size: 1.3em;
 		margin: 0 0 15px;
 		font-weight: 400;
 	}
@@ -176,4 +191,38 @@ input:focus {
 	&__article {
 		margin-top: 50px;
 	}
+}
+.scrollToTop{
+	width:25px; 
+	height:25px;
+	padding:10px;  
+	font-weight: bold;
+	color: #444;
+	position:absolute;
+	top:43px;
+	right:40px;
+	display:none;
+	background: url('img/arrow.png') no-repeat 50% 50%;
+	border: 1px solid #b6bcc1;
+}
+.scrollToTop:hover{
+	border: 1px solid #665a5a;
+}
+.back {
+	font-weight: 600;
+	border-bottom: 2px solid;
+	margin-bottom: 20px;
+    display: inline-block;
+    font-size: 1.2em;
+    &:before {
+    	content: "";
+    	background: url('img/arrow_left.png') no-repeat 50% 50%;
+    	width: 15px;
+    	height: 15px;
+    	display: inline-block;
+    	margin-right: 5px;
+    }
+    &:hover {
+    	border-bottom: 2px solid transparent;
+    }
 }

@@ -14,6 +14,13 @@ a {
 a:hover {
   border: none;
 }
+p {
+  margin: 0 0 20px;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
 button:focus,
 input:focus {
   outline: none;
@@ -27,10 +34,12 @@ input:focus {
   border-top: 1px solid #f5f3f4;
   padding: 40px 0;
   margin-top: 40px;
+  position: relative;
 }
-.footer__blog {
-  display: inline-flex;
-  width: 100%;
+.footer__blog:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 .footer__subtitle {
   font-size: 1em;
@@ -48,7 +57,7 @@ input:focus {
   border-left: 1px solid #b6bcc1;
   color: #665a5a;
   margin: 10px 0 0 10px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .column-text {
   width: 60%;
@@ -56,13 +65,16 @@ input:focus {
 }
 .column-link {
   width: 50%;
+  float: left;
 }
 .header {
   padding: 30px 0 20px;
   border-bottom: 1px solid #f5f3f4;
 }
-.header__blog {
-  display: inline-flex;
+.header__blog:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 .header__area {
   float: left;
@@ -88,9 +100,9 @@ input:focus {
 .header__content {
   margin-top: 10px;
 }
-.header__img {
-  width: 100%;
-  vertical-align: top;
+.header__img-link {
+  display: block;
+  border-bottom: none;
 }
 .header__title {
   font-size: 2em;
@@ -125,7 +137,7 @@ input:focus {
   width: 100%;
 }
 .article__title {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 0 0 15px;
   font-weight: 400;
 }
@@ -171,4 +183,38 @@ input:focus {
 }
 .blog__article {
   margin-top: 50px;
+}
+.scrollToTop {
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  font-weight: bold;
+  color: #444;
+  position: absolute;
+  top: 43px;
+  right: 40px;
+  display: none;
+  background: url('img/arrow.png') no-repeat 50% 50%;
+  border: 1px solid #b6bcc1;
+}
+.scrollToTop:hover {
+  border: 1px solid #665a5a;
+}
+.back {
+  font-weight: 600;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 1.2em;
+}
+.back:before {
+  content: "";
+  background: url('img/arrow_left.png') no-repeat 50% 50%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.back:hover {
+  border-bottom: 2px solid transparent;
 }
